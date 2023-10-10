@@ -1,0 +1,22 @@
+﻿@page "/foto"
+<h3>Foto</h3>
+<div class="row">
+    <div class="col">
+        <h1>Oefening 2</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <div class="card">
+            <div class="card-header">
+                Random foto
+            </div>
+            <div class="card-body text-center">
+                <img src="@RandomImg" id="foto">
+                <br>
+                <button id="btnRandom" @onclick="NewImage" class="btn btn-primary mt-2">Random foto</button>
+                <div id="logging"></div>
+            </div>
+        </div>
+    </div>
+</div>

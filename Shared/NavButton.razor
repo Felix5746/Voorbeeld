@@ -1,0 +1,11 @@
+﻿@code {
+    [Parameter] public string Link { get; set; }
+    [Parameter] public string Text { get; set; }
+}
+
+
+<div>
+    <NavLink href=@Link Match="NavLinkMatch.All">
+        <button class="btn btn-primary m-1">@Text</button>
+    </NavLink>
+</div>

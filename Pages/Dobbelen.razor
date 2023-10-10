@@ -1,0 +1,41 @@
+﻿@page "/dobbelen"
+<h3>Dobbelen</h3>
+<div class="row">
+
+
+    @for(var i = 1; i <= 12; i++)
+    {
+        <div class="col-md-3 mb-3">
+            <div class="card text-white @CssClasses[i-1]" id="@i">
+                <div class="card-body">
+                    <h5 class="card-title">speler @i</h5>
+                </div>
+            </div>
+        </div>
+    }
+      
+
+
+</div>
+<!-- // row -->
+
+<div class="row justify-content-center mt-3">
+    <div class="col-6 align-self-center text-center">
+        <div class="alert alert-info" id="result" role="alert"></div>
+    </div>
+</div>
+
+<div class="row justify-content-center mt-3">
+    <div class="col-3 text-center">
+        <button id="play" type="Button" @onclick="Play" class="btn btn-primary">PLAY</button>
+    </div>
+    <div class="col-3 text-center">
+        <button id="reset" type="Button" @onclick="Reset" class="btn btn-danger">RESET</button>
+    </div>
+</div>
+
+<label for="userInput">Enter a Guess</label>
+<input type="text" id="guess" @bind="Guess" />
+<label>@Output</label>
+
+

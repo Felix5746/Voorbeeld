@@ -1,0 +1,52 @@
+﻿@page "/funfacts"
+<h3>Funfacts</h3>
+
+@if (First)
+{
+    <div class="container">
+
+        <h3>Opdracht geboortedatum FunFacts</h3>
+
+        <div class="row">
+            <div class="col-md-4">
+
+                <form name="frmLeeftijd">
+                    <div class="row ">
+                        <div class="col-auto mb-3">
+                            <label for="geboortedatum">Je geboortedatum</label>
+                            <input type="date" @bind="Geboortedatum" id="geboortedatum" min="1970-01-01"/>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="col-auto mb-3">
+
+                            <button class="btn btn-primary btn-lg  mb-2" @onclick="GetFunfacts" type="button">
+                                Check
+                                FunFacts
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+}
+else
+{
+    <div class="container">
+
+        <h3>Opdracht geboortedatum FunFacts</h3>
+
+        <div class="row">
+            <div class="col-md-12">
+                <p>@Geboren</p>
+                <p>@Vandaag</p>
+                <p>@Dagen</p>
+                <p>@Sterven</p>
+                <button class="btn btn-primary btn-lg  mb-2" id="back" type="button">Opnieuw</button>
+            </div>
+        </div>
+    </div>
+}
